@@ -1,10 +1,10 @@
 ## Build
 
-This particular README is written with CalyxOS in mind. This is tested on Android 12L on a Pixel 5a. I've added `LOCAL_PRODUCT_MODULE := true` to AndroidAuto's `Android.mk` file. After pulling down the code from Calyx's repo as documented on their site, the three stub folders should be placed into `calyxos/android12L/prebuilts/`. 
+This particular README is written with CalyxOS in mind. This is tested on Android 12L on a Pixel 5a. I've added `LOCAL_PRODUCT_MODULE := true` to AndroidAuto's `Android.mk` file. After pulling down the code from Calyx's repo as documented on their site, the three stub folders should be placed into `calyxos/android13/prebuilts/`. 
 
-Next, add the following line in `calyxos/android12L/vendor/calyx/config/common.mk`:
+Next, add the following line in `calyxos/android13/vendor/calyx/config/common.mk`:
 ```
-PRODUCT_PACKAGES += AndroidAuto gappsstub speechservicestub
+PRODUCT_PACKAGES += AndroidAuto
 ```
 
 ## Verify Build
