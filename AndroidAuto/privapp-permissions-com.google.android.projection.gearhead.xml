@@ -18,5 +18,13 @@
         <permission name="android.permission.REQUEST_COMPANION_SELF_MANAGED"/>
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
         <permission name="android.permission.UPDATE_APP_OPS_STATS"/>
+        <permission name="android.permission.ADD_ALWAYS_UNLOCKED_DISPLAY"/>
+        <permission name="android.permission.CREATE_VIRTUAL_DEVICE"/>
+        <permission name="android.permission.TOGGLE_AUTOMOTIVE_PROJECTION"/>
+        <permission name="android.permission.REQUEST_COMPANION_PROFILE_AUTOMOTIVE_PROJECTION"/>
+        <permission name="android.permission.INTERACT_ACROSS_PROFILES"/>
+        <permission name="com.google.android.gms.permission.CAR_SPEED"/>
+        <permission name="android.permission.SYSTEM_ALERT_WINDOW"/>
+        <permission name="com.google.android.finsky.permission.GEARHEAD_SERVICE"/>
     </privapp-permissions>
 </permissions>
