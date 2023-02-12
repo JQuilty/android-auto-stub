@@ -1,10 +1,18 @@
 ## Build
 
-This particular README is written with CalyxOS in mind. This is tested on Android 12L on a Pixel 5a. I've added `LOCAL_PRODUCT_MODULE := true` to AndroidAuto's `Android.mk` file. After pulling down the code from Calyx's repo as documented on their site, the three stub folders should be placed into `calyxos/android12L/prebuilts/`. 
+This particular README is written with CalyxOS in mind. NOT TESTED! I've added `LOCAL_PRODUCT_MODULE := true` to AndroidAuto's `Android.mk` file. After pulling down the code from Calyx's repo as documented on their site, the stub folder should be placed into `calyxos/android13/prebuilts/`. 
 
-Next, add the following line in `calyxos/android12L/vendor/calyx/config/common.mk`:
+Next, add the following line in `calyxos/android13/vendor/calyx/config/common.mk`:
 ```
-PRODUCT_PACKAGES += AndroidAuto gappsstub speechservicestub
+PRODUCT_PACKAGES += AndroidAuto
+```
+Also, make sure to add Android Auto package name `com.google.android.projection.gearhead` to the role `config_systemAutomotiveProjection` in the line 2150 inside `calyxos/android13/frameworks/base/core/res/res/values/config.xml` file. 
+
+Should look like this: 
+
+```
+<!-- The names of the packages that will hold the automotive projection role. -->
+<string name="config_systemAutomotiveProjection" translatable="false">com.google.android.projection.gearhead</string>
 ```
 
 ## Verify Build
@@ -13,7 +21,7 @@ After going through Calyx's build and sign process, you can check that Android A
 
 ## Post-Flash Setup
 
-- Install the latest Android Auto APK as well as the latest APK for Google Maps. As far as I can tell, it doesn't matter if it comes from Aurora Store or if it's from a standalone APK. 
+- Install the latest Android Auto APK as well as the latest APK for: Google, Google Speech services and Google Maps. As far as I can tell, it doesn't matter if it comes from Aurora Store or if it's from a standalone APK. 
 
 - Open up Google Maps and grant it the location permission. You do not need to be signed in for this.
 
@@ -23,17 +31,10 @@ After going through Calyx's build and sign process, you can check that Android A
 
 - Android Auto should simply work now.
 
-## Sources
-
-Sources for SolidHal's stubs with build instructions: 
-
-https://github.com/SolidHal/SpeechServices-Package-Spoof
-
-https://github.com/SolidHal/Gapp-Package-Spoof
-
 ## Thanks
 - Thank you to @dylangerdaly for starting the initial effort.
 - Thank you to @SolidHal for the continuation of this effort and writing the code this repo was forked from.
+- Thank you to @JQuilty for the latest android 12L patches.
 - Thanks to everyone in this thread that's contributed and tested - https://github.com/microg/GmsCore/issues/897
 - Thanks to the MicroG developers.
 - Thanks to the CalyxOS developers.
