@@ -1,6 +1,6 @@
 ## Build
 
-This particular README is written with CalyxOS in mind. NOT TESTED! I've added `LOCAL_PRODUCT_MODULE := true` to AndroidAuto's `Android.mk` file. After pulling down the code from Calyx's repo as documented on their site, the stub folder should be placed into `calyxos/android13/prebuilts/`. 
+This particular README is written with CalyxOS in mind. NOT TESTED! I've added `LOCAL_PRODUCT_MODULE := true` to AndroidAuto's `Android.mk` file. After pulling down the code from Calyx's repo as documented on their site, the stub folder should be placed into `calyxos/android13/packages/apps/`. 
 
 Next, add the following line in `calyxos/android13/vendor/calyx/config/common.mk`:
 ```
